@@ -1,7 +1,12 @@
 /.gradle
 /.idea
 /out
-/build
+/classes
+/kotlin
+/libs
+/resources
+/scripts
+/tmp
 *.iml
 *.ipr
 *.iws

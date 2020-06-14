@@ -1,1 +1,1 @@
-web: ./build/install/visitorsmanagementsystem/bin/visitorsmanagementsystem
+web: ./build/install/system/bin/system
