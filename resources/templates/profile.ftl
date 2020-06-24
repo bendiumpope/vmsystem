@@ -5,7 +5,7 @@
       <fieldset>
         <#if profileUrls?? && (profileUrls !="") >
            <span width="5" />
-           <img src="/static/${profileUrls}" class="img-thumbnail" width="250" height="200" alt="profile image"/>
+           <img src="./static/${profileUrls}" class="img-thumbnail" width="250" height="200" alt="profile image"/>
         <#else>
            <img src="/static/profile.png" class="img-thumbnail" width="60" height="60" alt="profile image"/>
         </#if><br><br>

@@ -72,7 +72,7 @@ fun Route.profile(db: Repository, hashFunction: (String) -> String) {
             multipart.forEachPart { part ->
                 if (part is PartData.FileItem) {
                     val ext = File(part.originalFileName).extension
-                    val file = File("resources/images/upload-${System.currentTimeMillis()}${user.userId.hashCode()}.$ext")
+                    val file = File("./resources/images/upload-${System.currentTimeMillis()}${user.userId.hashCode()}.$ext")
 
                     part.streamProvider().use { its -> file.outputStream().buffered().use { its.copyToSuspend(it) } }
 
@@ -81,6 +81,7 @@ fun Route.profile(db: Repository, hashFunction: (String) -> String) {
                     imageFile = imageUrl.get(2)
 
                     db.addprofilepix(user.userId, imageFile!!)
+                    println("$imageFile")
 
                 }
 
